@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# Version 1.0
+# May 1st 2015
 # Written by Dave Boxall
 # PGP Key Directory maintenance script
 
