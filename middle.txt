@@ -1,0 +1,13 @@
+</p>
+  </div>
+</div>
+<BR>
+<div id="warning">
+
+  <p class="warn">PGP Best Practise suggests you should validate a public key against it's fingerprint to ensure that it is genuine. Fingerprints are provided below for that purpose</p>
+</div>
+<BR>
+
+<div id="warning">
+  <h2>The Fingerprints</h2>
+  <p class="info">
