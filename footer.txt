@@ -1,0 +1,11 @@
+</p>
+  </div>
+</div>
+<div id="warning">
+  <h2>Terms of Use</h2>
+  <p class="terms">Use of The Guardian PGP public keys for encrypting email contents is at the user's own risk.</p>
+  <p class="terms">Guardian PGP Public keys may be found on third party key servers. We cannot vouch for those third parties key stores but can vouch for the validity of keys on this site</p>
+  <p style="text-align:center;">Copyright &copy; Guardian News and Media 2015</p>
+</div>
+</body></html>
+
