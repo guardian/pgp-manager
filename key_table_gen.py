@@ -1,14 +1,12 @@
 #!/usr/bin/python
-# Version 1.0
-# May 1st 2015
 # Written by Dave Boxall
+# Version 1.1 
+# Aug 13th 2015
 # PGP Key Directory maintenance script
 
 import os
 
-
 for i in sorted(os.listdir('/home/ec2-user/PublicKeys')):
-# for i in os.listdir(os.getcwd()):
     if i.endswith(".pub.txt"): 
         fo = open("pk.txt", "a")
         b = i.replace("."," ")
@@ -27,6 +25,11 @@ for i in sorted(os.listdir('/home/ec2-user/Fingerprints')):
         fo.close()
     else:
         continue
+
+os.system("sort -k 3 pk.txt > pka.txt")
+os.system("sort -k 3 fp.txt > fpa.txt")
+os.system("mv pka.txt pk.txt")
+os.system("mv fpa.txt fp.txt")
 
 filenames = ['header.txt','pk.txt','middle.txt','fp.txt','footer.txt']
 with open('index.html','w') as outfile:
