@@ -4,130 +4,36 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>The Guardian PGP Key Server</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1 text/html; charset=UTF-8">
-<style type="text/css">
-body,html {margin: 0; padding: 0; border: 0; -webkit-font-smoothing: antialiased; font-family: Helvetica; width: 100%; height: 100%}
-h1 {font-size:40px;font-family: Helvetica;text-align: center; font-weight: normal;letter-spacing: 2px;}
-h2 {font-size:25px;font-family: Helvetica ;text-align: center; padding-top:40px; padding-bottom: 40px;font-weight: normal;
-letter-spacing: 3px;}
-h3 {text-align: center;}
-a img{border:2px;}
-ul{list-style-type:none;}
-ol{list-style-type:disk;}
-a{text-decoration:none;color:#005689;}
-a:hover{text-decoration:underline;}
-
-#header, #warning, #whatisit, #howtouse,#theplatform, #theterms, #about {padding-left:10%;padding-right:10%;color:#333;margin:0 auto;font-size:14px;display: block;line-height: 1;}
-#header{text-align: center; margin-top: 5%;}
-#whatisit, #howtouse{background-color: #214583; color: white; text-align: center;}
-#theterms {  color: color: #9c9c9c; 
-  background-color:rgb(244, 244, 244);
-  font-family: "AgateSans","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; }
-#url{
-  background-color: rgb(251, 251, 251)
-}
-
-
-
-.warn {
-  color: white;
-  background-color: #e6711b;
-  line-height: 25px;
-  padding: 20px;
-  width: 800px;
-  margin: auto;
-}
-
-.info {
-  color: white;
-  background-color: #214583;
-  line-height: 25px;
-  padding: 20px;
-  width: 800px;
-  margin: auto;
-}
-
-.kinfo {
-  color: white;
-  background-color: #214583;
-  line-height: 25px;
-  padding: 5px;
-  width: 800px;
-  margin: auto;
-}
-
-.terms {
-  color: color: #9c9c9c; 
-  background-color:rgb(244, 244, 244);
-  font-family: "AgateSans","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-  font-size: 14px; 
-  line-height: 25px;
-  padding: 20px;
-  width: 800px;
-  margin: auto;
-}
-
-a.button {
-  text-decoration: none;
-  padding: 10px;
-  color: white;
-  background: #94b1ca;
-  letter-spacing: 2px;  
-}
-
-.window {
-  width: 800px;
-  padding-bottom: 30px;
-  margin-top: 20px;
-  box-sizing: border-box;
-  overflow: hidden;
-  margin: auto;
-}
-
-.toolbar {
-  width: 800px;
-  height: 22px;
-  -webkit-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
-  margin: 0 -1px;
-  border: 1px solid #383b41;
-  background: #383b41;
-  padding: 5px;
-  text-align: left;
-}
-
-.content {
-  width: 800px;
-}
-
-</style>
-
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<body><div id="header">
-<a href="http://www.theguardian.com/"><img src="Images/titlepiece.gif" alt="Guardian logo"></a>
-<br />
-</div>
-<div id="header">
-  <h1>A way of securely emailing us</h1>
-  <h1>Avoiding email content disclosure</h1>
-</div>
-<div id="warning">
-<p class="info">
+<body>
+  <header id='#top'>
+    <img src="assetsforsecuredrop/theguardian-logo156x28.svg" alt="Logo">
+  </header>
+
+<div class="introcontainer">
+   <div class="intro">
+     <h1>
+       A way of securely emailing us
+     </h1>
+
+      <p>Avoiding email content disclosure</p>
+   </div>   
+ </div>
+
+
+<div class="instructionscontainer">
+  <div class="instructions">
+<p>
 There are times where anonymity is not a priority and the aim is to keep the conversation private.In this instance using email but adding an additional layer of security may be appropriate.Encrypting the contents of an email using public key cryptographic methods is the way to avoid compromise in this instance.</p><br>
-<p class="info">You are probably aware that The Guardian uses a third party cloud email solution. Encryption is a good way of gaining confidence that a third party cannot access the contents of the conversation</p><br>
-<p class="info">This page contains public keys of Guardian staff should you wish to send an encrypted email to one of them.
-</p>
-</div>
-<br>
-<div id="warning">
+<p>You are probably aware that The Guardian uses a third party cloud email solution. Encryption is a good way of gaining confidence that a third party cannot access the contents of the conversation</p><br>
+<p>This page contains public keys of Guardian staff should you wish to send an encrypted email to one of them.</p>
 
-  <p class="warn">There are many different implementations of Public Key Cryptography. At The Guardian we have opted for an open source implementation of the OpenPGP standard.As with any Public Key cryptography implementation there may be client and key incompatabilities - we will do our best to resolve discrepancies but some issues maybe beyond the capabilities of our technological implementation. The Guardian does not endorse any particular PGP integration or client</p>
+<p>There are many different implementations of Public Key Cryptography. At The Guardian we have opted for an open source implementation of the OpenPGP standard.As with any Public Key cryptography implementation there may be client and key incompatabilities - we will do our best to resolve discrepancies but some issues maybe beyond the capabilities of our technological implementation. The Guardian does not endorse any particular PGP integration or client</p>
 </div>
-<BR>
-<div id="warning">
-
-  <p class="warn">This list is not complete and the site is not fully operational as yet</p>
 </div>
-<BR>
-<div id="warning">
+<div class="pgpcontainer">
+  <div class="pgp">
   <h2>The Keys</h2>
-  <p class="info">
+  <p>

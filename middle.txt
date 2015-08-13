@@ -2,12 +2,13 @@
   </div>
 </div>
 <BR>
-<div id="warning">
-
-  <p class="warn">PGP Best Practise suggests you should validate a public key against it's fingerprint to ensure that it is genuine. Fingerprints are provided below for that purpose</p>
+<div class="pgpcontainer">
+  <div class="pgp">
+  <p>PGP Best Practise suggests you should validate a public key against it's fingerprint to ensure that it is genuine. Fingerprints are provided below for that purpose</p>
+</div>
 </div>
 <BR>
-
-<div id="warning">
+<div class="pgpcontainer">
+  <div class="pgp">
   <h2>The Fingerprints</h2>
-  <p class="info">
+  <p>
