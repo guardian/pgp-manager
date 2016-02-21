@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # Written by Dave Boxall
-# Version 1.1 
-# Aug 13th 2015
+# Version 1.2
+# Feb 19th 2016
 # PGP Key Directory maintenance script
 
-import os
+import os, sys
 
-for i in sorted(os.listdir('/home/ec2-user/PublicKeys')):
-    if i.endswith(".pub.txt"): 
+for i in sorted(os.listdir('home/ec2-user/PublicKeys')):
+    if i.endswith(".pub.txt"):
         fo = open("pk.txt", "a")
         b = i.replace("."," ")
         z = b.split(" ")[0:2]
@@ -15,7 +15,7 @@ for i in sorted(os.listdir('/home/ec2-user/PublicKeys')):
         fo.write('<a href="PublicKeys/'+i+' "class="kinfo">'+q+'</a>\n')
         fo.close()
 
-for i in sorted(os.listdir('/home/ec2-user/Fingerprints')):
+for i in sorted(os.listdir('home/ec2-user/Fingerprints')):
     if i.endswith(".fpr.txt"):
         fo = open("fp.txt", "a")
         c = i.replace("."," ")
@@ -31,6 +31,36 @@ os.system("sort -k 3 fp.txt > fpa.txt")
 os.system("mv pka.txt pk.txt")
 os.system("mv fpa.txt fp.txt")
 
+inputfiles = ['pk.txt']
+with open("pkb.txt","w") as outfile:
+  for fname in inputfiles:
+    with open(fname) as infile:
+      for line in infile:
+        x = line.split(" ")
+        q  = x[2]
+        r = q[:1]
+        outfile.write('<H3><BOLD>'+r+'</BOLD></H3>\n'+line+'\n') 
+outfile.close() 
+infile.close()
+
+os.system("cat pkb.txt | awk '!x[$0]++'>pkc.txt")
+os.system("mv pkc.txt pk.txt") 
+
+inputfiles = ['fp.txt']
+with open("fpb.txt","w") as outfile:
+  for fname in inputfiles:
+    with open(fname) as infile:
+      for line in infile:
+        x = line.split(" ")
+        q  = x[2]
+        r = q[:1]
+        outfile.write('<H3><BOLD>'+r+'</BOLD></H3>\n'+line+'\n') 
+outfile.close() 
+infile.close()
+
+os.system("cat fpb.txt | awk '!x[$0]++'>fpc.txt")
+os.system("mv fpc.txt fp.txt") 
+
 filenames = ['header.txt','pk.txt','middle.txt','fp.txt','footer.txt']
 with open('index.html','w') as outfile:
   for fname in filenames:
@@ -38,6 +68,7 @@ with open('index.html','w') as outfile:
       for line in infile:
         outfile.write(line)
 
-os.remove('/home/ec2-user/pk.txt')
-os.remove('/home/ec2-user/fp.txt')
-
+os.remove('pk.txt')
+os.remove('fp.txt')
+os.remove('pkb.txt')
+os.remove('fpb.txt')
