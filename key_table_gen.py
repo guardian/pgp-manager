@@ -12,7 +12,7 @@ for i in sorted(os.listdir('home/ec2-user/PublicKeys')):
         b = i.replace("."," ")
         z = b.split(" ")[0:2]
         q = " ".join(z)
-        fo.write('<a href="PublicKeys/'+i+' "class="kinfo">'+q+'</a>\n')
+        fo.write('<p><a href="PublicKeys/'+i+' "class="kinfo">'+q+'</a></p>\n')
         fo.close()
 
 for i in sorted(os.listdir('home/ec2-user/Fingerprints')):
@@ -21,7 +21,7 @@ for i in sorted(os.listdir('home/ec2-user/Fingerprints')):
         c = i.replace("."," ")
         e = c.split(" ")[0:2]
         h = " ".join(e)
-        fo.write('<a href="Fingerprints/'+i+' "class="kinfo">'+h+'</a>\n')
+        fo.write('<p><a href="Fingerprints/'+i+' "class="kinfo">'+h+'</a></p>\n')
         fo.close()
     else:
         continue
@@ -39,7 +39,7 @@ with open("pkb.txt","w") as outfile:
         x = line.split(" ")
         q  = x[2]
         r = q[:1]
-        outfile.write('<H3><BOLD>'+r+'</BOLD></H3>\n'+line+'\n') 
+        outfile.write('<H2><BOLD>'+r+'</BOLD></H2>\n'+line+'\n') 
 outfile.close() 
 infile.close()
 
@@ -54,7 +54,7 @@ with open("fpb.txt","w") as outfile:
         x = line.split(" ")
         q  = x[2]
         r = q[:1]
-        outfile.write('<H3><BOLD>'+r+'</BOLD></H3>\n'+line+'\n') 
+        outfile.write('<H2><BOLD>'+r+'</BOLD></H2>\n'+line+'\n') 
 outfile.close() 
 infile.close()
 
