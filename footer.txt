@@ -1,0 +1,22 @@
+</p>
+  </div>
+</div>
+<div class="termscontainer">
+  <div class="terms">
+    <h2>Terms and conditions</h2>
+  <p>Use of The Guardian PGP public keys for encrypting email contents is at the user's own risk.</p>
+  <p>Guardian PGP Public keys may be found on third party key servers. We cannot vouch for those third parties key stores but can vouch for the validity of keys on this site</p>
+</div>
+</div>
+<div class="footercontainer">
+  <footer>
+    <a href="#top"><img src="assetsforsecuredrop/up-arrow.svg" alt=""><p>back to top</p></a><img src="assetsforsecuredrop/theguardian-logo156x28.svg" alt="Logo">
+  </footer>
+</div>
+
+  <div class="subfooter">
+    <p>&copy; 2016 Guardian News &amp; Media</p>
+  </div>
+</body>
+</html>
+
