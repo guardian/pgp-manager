@@ -1,12 +1,16 @@
 #!/usr/bin/python
-# Written by Dave Boxall
-# Version 1.2
-# Feb 19th 2016
+# Written by Dave Boxall, Stiliyana Simeonova
+# Version 1.3
+# Jan 8th 2019
 # PGP Key Directory maintenance script
+#
+# CHANGELOG
+# 1.3 - take into account revokation key folder to generate list of revoked keys as well
+#
 
 import os, sys
 
-for i in sorted(os.listdir('home/ec2-user/PublicKeys')):
+for i in sorted(os.listdir('/home/ec2-user/PublicKeys')):
     if i.endswith(".pub.txt"):
         fo = open("pk.txt", "a")
         b = i.replace("."," ")
@@ -15,7 +19,7 @@ for i in sorted(os.listdir('home/ec2-user/PublicKeys')):
         fo.write('<p><a href="PublicKeys/'+i+' "class="kinfo">'+q+'</a></p>\n')
         fo.close()
 
-for i in sorted(os.listdir('home/ec2-user/Fingerprints')):
+for i in sorted(os.listdir('/home/ec2-user/Fingerprints')):
     if i.endswith(".fpr.txt"):
         fo = open("fp.txt", "a")
         c = i.replace("."," ")
