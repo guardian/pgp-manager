@@ -1,12 +1,4 @@
 #!/usr/bin/python
-# Written by Dave Boxall, Stiliyana Simeonova
-# Version 1.3
-# Jan 8th 2019
-# PGP Key Directory maintenance script
-#
-# CHANGELOG
-# 1.3 - take into account revokation key folder to generate list of revoked keys as well
-#
 
 import os, sys
 
@@ -39,11 +31,14 @@ inputfiles = ['pk.txt']
 with open("pkb.txt","w") as outfile:
   for fname in inputfiles:
     with open(fname) as infile:
-      for line in infile:
+      for index, line in enumerate(infile):
         x = line.split(" ")
-        q  = x[2]
-        r = q[:1]
-        outfile.write('<H2><BOLD>'+r+'</BOLD></H2>\n'+line+'\n') 
+        if (len(x) > 2):
+          q  = x[2]
+          r = q[:1]
+          outfile.write('<H2><BOLD>'+r+'</BOLD></H2>\n'+line+'\n')
+        else:
+          print('Something when wrong with line %s: %s' % (index, line))
 outfile.close() 
 infile.close()
 
@@ -54,12 +49,15 @@ inputfiles = ['fp.txt']
 with open("fpb.txt","w") as outfile:
   for fname in inputfiles:
     with open(fname) as infile:
-      for line in infile:
+      for index, line in enumerate(infile):
         x = line.split(" ")
-        q  = x[2]
-        r = q[:1]
-        outfile.write('<H2><BOLD>'+r+'</BOLD></H2>\n'+line+'\n') 
-outfile.close() 
+        if (len(x) > 2):
+          q  = x[2]
+          r = q[:1]
+          outfile.write('<H2><BOLD>'+r+'</BOLD></H2>\n'+line+'\n')
+        else:
+          print('Something when wrong with line %s: %s' % (index, line))
+outfile.close()
 infile.close()
 
 os.system("cat fpb.txt | awk '!x[$0]++'>fpc.txt")
